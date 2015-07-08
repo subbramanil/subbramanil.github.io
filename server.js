@@ -5,6 +5,7 @@
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
+var request = require('request');
 
 app.set('views',__dirname + '/app/partials');
 app.set('views',__dirname);
@@ -15,7 +16,7 @@ app.use("/static",express.static(__dirname + '/static',{maxAge: oneDay}));
 app.use("/lib",express.static(__dirname + '/lib',{maxAge: oneDay}));
 app.use("/app",express.static(__dirname + '/app',{maxAge: oneDay}));
 
-require('./router')(app);
+require('./router')(app, request);
 
 var server = http.listen(process.env.PORT || 8090, function(){
     console.log("Server is ready at port "+server.address().port);

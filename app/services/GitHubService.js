@@ -11,7 +11,7 @@
         var gitRESTUrls = {
             profile: "/users/subbramanil",
             repo: "/users/subbramanil/repos",
-            events: "/repos/subbramanil/"
+            events: "/repos/subbramanil/AndroidAssignments",
         };
 
         var service = {};
@@ -25,6 +25,13 @@
                 error(function (data, status, headers, config) {
                     Utils.logError("Error in fetching User info", status);
                 });
+
+            /*$http.get("https://yoda.p.mashape.com/yoda?sentence=hey")
+                .header("X-Mashape-Key", "IoGoZvHkvGmshFZvQOnUu8xluujBp1oGrJmjsnXzHeYNL1tAxa")
+                .header("Accept", "text/plain")
+                .end(function (result) {
+                    console.log(result.status, result.headers, result.body);
+                });*/
         };
 
         service.getRepositories = function () {
@@ -42,10 +49,10 @@
                 });
         };
 
-        service.getEvents = function (repoName) {
-            $http.get(baseURL + gitRESTUrls.events+repoName).
+        service.getEvents = function () {
+            $http.get(baseURL + gitRESTUrls.events).
                 success(function (result, status, headers, config) {
-                    Utils.logMsg("Got Repo data from server", result);
+                    Utils.logMsg("Got Event data from server", result);
                     service.eventList = result;
                     /*angular.forEach(service.eventList, function (item, index) {
                         Utils.logMsg("Event Name: ", item.name);
@@ -56,8 +63,23 @@
                 });
         };
 
+        service.getPages = function (repoName) {
+            $http.get(baseURL + gitRESTUrls.events+repoName).
+                success(function (result, status, headers, config) {
+                    Utils.logMsg("Got Repo data from server", result);
+                    service.eventList = result;
+                    /*angular.forEach(service.eventList, function (item, index) {
+                     Utils.logMsg("Event Name: ", item.name);
+                     });*/
+                }).
+                error(function (data, status, headers, config) {
+                    Utils.logError("Error in fetching events ", status);
+                });
+        };
+
         service.getUserInfo();
         service.getRepositories();
+        service.getEvents();
         return service;
     }]);
 })(angular);

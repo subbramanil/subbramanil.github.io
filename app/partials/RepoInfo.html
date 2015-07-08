@@ -1,13 +1,20 @@
 <div ng-repeat="repo in repoList">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="text-capitalize">{{repo.name}}</h3>
+    <div class="mdl-card on-the-road-again mdl-cell mdl-cell&#45;&#45;12-col">
+        <div class="mdl-card__media mdl-color-text&#45;&#45;grey-50">
+            <h3><a href={{repo.html_url}}>{{repo.name}}</a></h3>
         </div>
-        <div class="panel-body">
-            <p class="text-center">
-                {{repo.description}}
-            </p>
-            <a href={{repo.html_url}} class="btn btn-default pull-right"><span>View on GitHub</span></a>
+        <div class="mdl-color-text&#45;&#45;grey-600 mdl-card__supporting-text">
+            {{repo.description}}
+        </div>
+        <div class="mdl-card__supporting-text meta mdl-color-text&#45;&#45;grey-600">
+            <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button&#45;&#45;icon"
+                    href="{{repo.html_url}}">
+                <i class="material-icons">arrow_forward</i>
+            </a>
+            <div>
+                <strong>The Newist</strong>
+                <span>2 days ago</span>
+            </div>
         </div>
     </div>
 </div>
