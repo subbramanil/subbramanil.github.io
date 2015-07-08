@@ -6,8 +6,8 @@ module.exports = function (app) {
 
     var params = {
         client_id: "85a76b9be1ff1495916d",
-        //redirect_uri: "http://localhost:3031/home",
-        redirect_uri: "http://subbramanil.github.io/home",
+        redirect_uri: "http://localhost:3031/home",
+        //redirect_uri: "http://subbramanil.github.io/home",
         scope: "",
         state: "mani"
     };
@@ -35,11 +35,22 @@ module.exports = function (app) {
             },
             function (error, response, body) {
                 console.log(response.statusCode);
+                console.log(response.access_token);
                 if (!error && response.statusCode == 200) {
                     //console.log(body);
                 }
             }
         );
         res.render("index.html");
+    });
+
+    app.get("/content", function (req, res) {
+        console.log("loading content page");
+        res.render("content.html");
+    });
+
+    app.get("/app/partials/repoDetails", function (req, res) {
+        console.log("loading repo details page");
+        res.render("RepoInfo.html");
     });
 };
