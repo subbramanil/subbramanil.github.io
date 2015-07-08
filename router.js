@@ -6,7 +6,8 @@ module.exports = function (app) {
 
     var params = {
         client_id: "85a76b9be1ff1495916d",
-        redirect_uri: "http://localhost:3031/home",
+        //redirect_uri: "http://localhost:3031/home",
+        redirect_uri: "http://subbramanil.github.io/home",
         scope: "",
         state: "mani"
     };
