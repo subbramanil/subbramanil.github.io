@@ -44,7 +44,7 @@ module.exports = function (app) {
         res.render("index.html");
     });
 
-    app.get("/content", function (req, res) {
+    app.get("/app/partials/content", function (req, res) {
         console.log("loading content page");
         res.render("content.html");
     });
