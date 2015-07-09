@@ -1,5 +1,5 @@
 <div class="mdl-card coffee-pic mdl-cell&#45;&#45;12-col">
-    <div class="mdl-card__media mdl-color-text--grey-50 ">
+    <div class="mdl-card__media mdl-color-text--grey-50">
         <img ng-src={{User.avatar_url}} class="demo-avatar"/>
         <h3 class="pull-right">{{User.name}}</h3>
     </div>
@@ -7,24 +7,9 @@
         <div class="minilogo">
         </div>
         <div>
-            <strong>{{User.location}}</strong>
-            <span>2 days ago</span>
+            <strong>{{User.company}}</strong>
+            <span>{{User.location}}</span>
+            <span>Member since {{User.created_at | date:'medium'}}</span>
         </div>
     </div>
 </div>
-    <!--<img ng-src="{{User.avatar_url}}" />-->
-
-<!--<div class="mdl-card mdl-shadow&#45;&#45;4dp mdl-cell&#45;&#45;12-col">
-    <div class="mdl-card__title">
-         <h3 class="mdl-card__title-text">{{User.name}}</h3>
-    </div>
-    <div class="mdl-card__media">
-        <img src="photo.jpg" width="220" height="140" border="0" alt="" style="padding:20px;">
-    </div>
-    <div class="mdl-card__supporting-text">
-        {{user.avatar_url}}
-    </div>
-    <div class="mdl-card__actions">
-        <a href="test">test</a>
-    </div>
-</div>-->

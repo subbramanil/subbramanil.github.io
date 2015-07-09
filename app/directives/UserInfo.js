@@ -19,7 +19,6 @@
                         return GitHubService.User;
                     }, function () {
                         $scope.User = GitHubService.User;
-                        Utils.logMsg("Got User info from directive: ", $scope.User);
                     });
                 }
             }

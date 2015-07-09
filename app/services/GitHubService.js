@@ -11,7 +11,7 @@
         var gitRESTUrls = {
             profile: "/users/subbramanil",
             repo: "/users/subbramanil/repos",
-            events: "/repos/subbramanil/AndroidAssignments",
+            events: "/repos/subbramanil/course-projects/events",
         };
 
         var service = {};
@@ -54,6 +54,7 @@
                 success(function (result, status, headers, config) {
                     Utils.logMsg("Got Event data from server", result);
                     service.eventList = result;
+                    Utils.logMsg("Most recent commit: ", service.eventList[0]);
                     /*angular.forEach(service.eventList, function (item, index) {
                         Utils.logMsg("Event Name: ", item.name);
                     });*/
