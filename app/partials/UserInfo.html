@@ -1,15 +1,29 @@
-<div class="mdl-card coffee-pic mdl-cell&#45;&#45;12-col">
-    <div class="mdl-card__media mdl-color-text--grey-50">
+<!--<div class="mdl-card coffee-pic mdl-cell&#45;&#45;12-col">
+    <div class="mdl-card__media mdl-color-text&#45;&#45;grey-50">
         <img ng-src={{User.avatar_url}} class="demo-avatar"/>
         <h3 class="pull-right">{{User.name}}</h3>
     </div>
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+    <div class="mdl-card__supporting-text meta mdl-color-text&#45;&#45;grey-600">
         <div class="minilogo">
         </div>
         <div>
             <strong>{{User.company}}</strong>
             <span>{{User.location}}</span>
             <span>Member since {{User.created_at | date:'medium'}}</span>
+        </div>
+    </div>
+</div>-->
+
+<div class="mdl-card coffee-pic mdl-cell&#45;&#45;12-col" style="min-height: 250px;">
+    <div class="mdl-card__media mdl-color-text--grey-50 pull-right">
+        <img ng-src={{User.avatar_url}} class="demo-avatar"/>
+        <div class="meta mdl-color-text--grey-50">
+            <div>
+                <h3>{{User.name}}</h3>
+                <strong>{{User.company}}</strong>
+                <span>{{User.location}}</span>
+                <span>Member since {{User.created_at | date:'medium'}}</span>
+            </div>
         </div>
     </div>
 </div>

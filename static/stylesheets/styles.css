@@ -557,9 +557,9 @@ Added by Subbu
 */
 
 .demo-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 48px;
+    width: 200px;
+    height: 200px;
+    border-radius: 96px;
 }
 
 .my-header{
