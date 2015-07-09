@@ -1,3 +1,3 @@
 # subbramanil.github.io
 
-Templates generated using Github pages
+GitHub project page using angular.js, node.js and Material Lite design by Google
