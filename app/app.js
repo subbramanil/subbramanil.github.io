@@ -25,8 +25,8 @@
                 .when("/projects", {
                     templateUrl: "./app/partials/projects"
                 })
-                .when("/repoDetails", {
-                    templateUrl: "./app/partials/repoDetails",
+                .when("/repoInfo", {
+                    templateUrl: "./app/partials/repoInfo",
                     controller: "RepoController"
                 })
                 .otherwise("/");

@@ -24,7 +24,7 @@ module.exports = function (app) {
         res.render("projects.html");
     });
 
-    app.get("/app/partials/repoDetails", function (req, res) {
+    app.get("/app/partials/repoInfo", function (req, res) {
         console.log("loading repo details page");
         res.render("repoInfo.html");
     });
