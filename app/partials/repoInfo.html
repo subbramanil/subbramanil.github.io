@@ -1,0 +1,27 @@
+<div class="demo-back">
+    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--accent mdl-color-text--accent-contrast"
+       href="#projects" style="width: 50px; height: 50px; margin-left: 30px;">
+        <i class="material-icons">arrow_back</i>
+    </a>
+</div>
+<div class="demo-blog__posts mdl-grid ">
+    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+        <div class="mdl-card__media mdl-color-text--grey-50">
+            <h3>{{selectedRepo.name}}</h3>
+        </div>
+        <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+            <div>
+                <strong>The Newist</strong>
+                <span>2 days ago</span>
+            </div>
+            <div class="section-spacer"></div>
+            <div class="meta__favorites">425 <i class="material-icons">favorite</i></div>
+            <div><i class="material-icons">bookmark</i></div>
+            <div><i class="material-icons">share</i></div>
+        </div>
+        <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+            <a href="{{selectedRepo.html_url}}"
+               class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View
+                Source</a>
+        </div>
+    </div>
