@@ -9,7 +9,7 @@
         "GitHubService",
         function () {
             return {
-                templateUrl: "./app/partials/RepoList.html",
+                templateUrl: "./app/partials/repoList.html",
                 restrict: "E",
                 scope: "=",
                 controller: function ($scope, GitHubService) {

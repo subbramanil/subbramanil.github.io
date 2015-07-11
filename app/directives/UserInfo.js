@@ -10,7 +10,7 @@
         "Utils",
         function () {
             return {
-                templateUrl: "./app/partials/UserInfo.html",
+                templateUrl: "./app/partials/userInfo.html",
                 restrict: "E",
                 scope: "=",
                 controller: function ($scope, GitHubService, Utils) {

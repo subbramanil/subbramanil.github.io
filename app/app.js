@@ -17,7 +17,13 @@
         function($routeProvider) {
             $routeProvider
                 .when("/", {
-                    templateUrl: "./app/partials/content"
+                    templateUrl: "./app/partials/aboutMe"
+                })
+                //.when("/aboutMe", {
+                //    templateUrl: "./app/partials/aboutMe"
+                //})
+                .when("/projects", {
+                    templateUrl: "./app/partials/projects"
                 })
                 .when("/repoDetails", {
                     templateUrl: "./app/partials/repoDetails",

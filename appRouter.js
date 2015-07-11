@@ -14,13 +14,18 @@ module.exports = function (app) {
         res.render("index.html");
     });
 
-    app.get("/app/partials/content", function (req, res) {
-        console.log("loading content page");
-        res.render("content.html");
+    app.get("/app/partials/aboutMe", function (req, res) {
+        console.log("loading aboutMe page");
+        res.render("aboutMe.html");
+    });
+
+    app.get("/app/partials/projects", function (req, res) {
+        console.log("loading projects page");
+        res.render("projects.html");
     });
 
     app.get("/app/partials/repoDetails", function (req, res) {
         console.log("loading repo details page");
-        res.render("RepoInfo.html");
+        res.render("repoInfo.html");
     });
 };
