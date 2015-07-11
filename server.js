@@ -16,7 +16,9 @@ app.use("/static",express.static(__dirname + '/static',{maxAge: oneDay}));
 app.use("/lib",express.static(__dirname + '/lib',{maxAge: oneDay}));
 app.use("/app",express.static(__dirname + '/app',{maxAge: oneDay}));
 
-require('./router')(app, request);
+// Using personal access token; No need to make api calls to get the data
+require('./appRouter')(app, request);
+//require('./router')(app, request);
 
 var server = http.listen(process.env.PORT || 8090, function(){
     console.log("Server is ready at port "+server.address().port);

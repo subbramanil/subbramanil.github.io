@@ -7,6 +7,8 @@
 
     module.service("GitHubService", ["$http", "Utils", function ($http, Utils) {
 
+        var personalGitHubToken = "245dd5b7e9f47050194751e7c36e48126ff0ddbd";
+
         var baseURL = "https://api.github.com";
         var gitRESTUrls = {
             profile: "/users/subbramanil",
@@ -16,8 +18,15 @@
 
         var service = {};
 
+        service.selectedRepo = {};
+
         service.getUserInfo = function () {
-            $http.get(baseURL + gitRESTUrls.profile).
+            $http.get(baseURL + gitRESTUrls.profile,
+                {
+                    params: {
+                        access_token: personalGitHubToken
+                    }
+                }).
                 success(function (result, status, headers, config) {
                     Utils.logMsg("Got User data from server", result);
                     service.User = result;
@@ -27,11 +36,11 @@
                 });
 
             /*$http.get("https://yoda.p.mashape.com/yoda?sentence=hey")
-                .header("X-Mashape-Key", "IoGoZvHkvGmshFZvQOnUu8xluujBp1oGrJmjsnXzHeYNL1tAxa")
-                .header("Accept", "text/plain")
-                .end(function (result) {
-                    console.log(result.status, result.headers, result.body);
-                });*/
+             .header("X-Mashape-Key", "IoGoZvHkvGmshFZvQOnUu8xluujBp1oGrJmjsnXzHeYNL1tAxa")
+             .header("Accept", "text/plain")
+             .end(function (result) {
+             console.log(result.status, result.headers, result.body);
+             });*/
         };
 
         service.getRepositories = function () {
@@ -56,8 +65,8 @@
                     service.eventList = result;
                     Utils.logMsg("Most recent commit: ", service.eventList[0]);
                     /*angular.forEach(service.eventList, function (item, index) {
-                        Utils.logMsg("Event Name: ", item.name);
-                    });*/
+                     Utils.logMsg("Event Name: ", item.name);
+                     });*/
                 }).
                 error(function (data, status, headers, config) {
                     Utils.logError("Error in fetching events ", status);
@@ -65,7 +74,7 @@
         };
 
         service.getPages = function (repoName) {
-            $http.get(baseURL + gitRESTUrls.events+repoName).
+            $http.get(baseURL + gitRESTUrls.events + repoName).
                 success(function (result, status, headers, config) {
                     Utils.logMsg("Got Repo data from server", result);
                     service.eventList = result;

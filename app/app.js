@@ -17,8 +17,7 @@
         function($routeProvider) {
             $routeProvider
                 .when("/", {
-                    templateUrl: "./app/partials/content",
-                    controller: "ProjectController"
+                    templateUrl: "./app/partials/content"
                 })
                 .when("/repoDetails", {
                     templateUrl: "./app/partials/repoDetails",

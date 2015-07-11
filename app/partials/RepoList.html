@@ -1,20 +1,22 @@
 <div ng-repeat="repo in repoList">
-    <div class="mdl-card on-the-road-again mdl-cell mdl-cell&#45;&#45;12-col">
+    <div class="mdl-card repoCard mdl-shadow--2dp mdl-cell mdl-cell&#45;&#45;12-col">
         <div class="mdl-card__media mdl-color-text&#45;&#45;grey-50">
-            <h3><a href={{repo.html_url}}>{{repo.name}}</a></h3>
+            <h3>{{repo.name}}</h3>
         </div>
         <div class="mdl-color-text&#45;&#45;grey-600 mdl-card__supporting-text">
             {{repo.description}}
         </div>
         <div class="mdl-card__supporting-text meta mdl-color-text&#45;&#45;grey-600">
-            <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button&#45;&#45;icon"
-                    href="{{repo.html_url}}">
-                <i class="material-icons">arrow_forward</i>
-            </a>
             <div>
                 <strong>Last Updated</strong>
                 <span>{{repo.updated_at | date:'medium'}}</span>
-                <a href="#repoDetails">Details</a>
+                <div>
+                    <a href="#repoDetails">Details</a>
+                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button&#45;&#45;icon"
+                    ng-click="viewRepo(repo)" href="#repoDetails">
+                        <i class="material-icons">arrow_forward</i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

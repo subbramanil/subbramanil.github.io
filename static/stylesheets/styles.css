@@ -7,7 +7,6 @@ body {
 }
 
 body::before {
-    background-image: url('../images/head.jpg');
     background-size: cover;
     background-attachment: fixed;
     content: '';
@@ -194,7 +193,7 @@ body .demo-blog {
           order: -1;
 }
 .demo-blog .coffee-pic .mdl-card__media {
-  background-image: url('../images/headerbg.jpg');
+  background-image: url('../images/cardbground-1.jpg');
 }
 .demo-blog .something-else .mdl-card__media {
   display: -webkit-box;
@@ -239,8 +238,8 @@ body .demo-blog {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.demo-blog .on-the-road-again .mdl-card__media {
-  background-image: url('../images/road.jpg');
+.demo-blog .repoCard .mdl-card__media {
+  background-image: url('../images/cardbground.jpg');
 }
 .demo-blog .shopping .mdl-card__media {
   background-image: url('../images/shopping.jpg');
@@ -498,7 +497,7 @@ body .demo-blog {
 .demo-blog .minilogo {
   width: 44px;
   height: 44px;
-  background-image: url('images/avatar.png');
+  /*background-image: url('images/avatar.png');*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -575,12 +574,12 @@ Added by Subbu
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-direction: column;
+    flex-direction: row;
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    /*min-height: 360px;*/
+    min-height: 200px;
 }
 
 .demo-blog .mdl-header-card .mdl-card__title {

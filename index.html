@@ -45,7 +45,6 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
           rel="stylesheet">
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="static/stylesheets/material.min.css">
     <link rel="stylesheet" href="static/stylesheets/styles.css">
@@ -65,11 +64,7 @@
 <body>
 <div class="mdl-layout__container">
     <div class="demo-blog mdl-layout mdl-js-layout mdl-layout--fixed-header has-drawer is-upgraded">
-        <div class="mdl-layout__header">
-            <div class="mdl-layout--fixed-header">
-                <user-info></user-info>
-            </div>
-        </div>
+        <user-info></user-info>
         <div class="mdl-layout__content">
             <ng-view></ng-view>
         </div>
@@ -77,10 +72,6 @@
         <div class="mdl-layout__obfuscator"></div>
     </div>
 
-    <a href="https://github.com/google/material-design-lite/blob/master/templates/blog/" target="_blank"
-       id="view-source"
-       class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View
-        Source</a>
 </div>
 <script type="application/javascript" src="lib/angular.js"></script>
 <script type="application/javascript" src="lib/angular-route.js"></script>
@@ -97,6 +88,7 @@
 
 <script type="application/javascript" src="app/controllers/appControllers.js"></script>
 <script type="application/javascript" src="app/controllers/ProjectController.js"></script>
+<script type="application/javascript" src="app/controllers/RepoController.js"></script>
 <script src="lib/material.min.js"></script>
 </body>
 </html>

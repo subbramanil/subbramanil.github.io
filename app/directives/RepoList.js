@@ -20,6 +20,12 @@
                         $scope.repoList = GitHubService.repoList;
                         console.log($scope.repoList);
                     });
+
+                    $scope.viewRepo = function (repo) {
+                        console.log("Get this repo "+repo);
+                        GitHubService.selectedRepo = repo;
+                        console.log("Get this repo "+GitHubService.selectedRepo);
+                    };
                 }
             }
         }]);
