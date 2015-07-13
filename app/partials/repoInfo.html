@@ -11,8 +11,8 @@
         </div>
         <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
             <div>
-                <strong>The Newist</strong>
-                <span>2 days ago</span>
+                <strong>{{selectedRepo.description}}</strong>
+                Last updated on <span>{{selectedRepo.updated_at | date:'medium'}}</span>
             </div>
             <div class="section-spacer"></div>
             <div class="meta__favorites">425 <i class="material-icons">favorite</i></div>

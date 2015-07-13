@@ -13,7 +13,7 @@
         var gitRESTUrls = {
             profile: "/users/subbramanil",
             repo: "/users/subbramanil/repos",
-            events: "/repos/subbramanil/course-projects/events",
+            events: "/repos/subbramanil/",
         };
 
         var service = {};
@@ -58,8 +58,8 @@
                 });
         };
 
-        service.getEvents = function () {
-            $http.get(baseURL + gitRESTUrls.events).
+        service.getEvents = function (repoName) {
+            $http.get(baseURL + gitRESTUrls.events+repoName+"/events").
                 success(function (result, status, headers, config) {
                     Utils.logMsg("Got Event data from server", result);
                     service.eventList = result;
@@ -89,7 +89,6 @@
 
         service.getUserInfo();
         service.getRepositories();
-        service.getEvents();
         return service;
     }]);
 })(angular);

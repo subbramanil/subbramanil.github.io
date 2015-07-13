@@ -647,5 +647,9 @@ Added by Subbu
     margin-left: 0;
 }
 
+.aboutMe .mdl-card__media {
+    background-image: url('../images/cardbground-1.jpg');
+}
+
 
 
