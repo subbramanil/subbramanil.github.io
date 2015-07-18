@@ -64,10 +64,26 @@
 <body>
 <div class="mdl-layout__container">
     <div class="demo-blog mdl-layout mdl-js-layout mdl-layout--fixed-header has-drawer is-upgraded">
-        <user-info></user-info>
-        <div class="mdl-layout__content">
-            <ng-view></ng-view>
+        <div class="layout-transparent mdl-layout mdl-js-layout">
+            <header class="mdl-layout__header mdl-layout__header--transparent">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">Subbu</span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Navigation -->
+                    <nav class="mdl-navigation">
+                        <a class="mdl-navigation__link" href="#aboutMe">About Me</a>
+                        <a class="mdl-navigation__link" href="#projects">My Projects</a>
+                        <a class="mdl-navigation__link" href="#interests">My Interests</a>
+                    </nav>
+                </div>
+            </header>
         </div>
+        <!--<user-info></user-info>-->
+        <main class="mdl-layout__content pull-right mdl-cell--12-col">
+            <ng-view></ng-view>
+        </main>
 
         <div class="mdl-layout__obfuscator"></div>
     </div>

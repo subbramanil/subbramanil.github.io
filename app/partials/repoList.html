@@ -1,21 +1,23 @@
-<div ng-repeat="repo in repoList">
-    <div class="mdl-card repoCard mdl-shadow--2dp mdl-cell mdl-cell&#45;&#45;12-col">
-        <div class="mdl-card__media mdl-color-text&#45;&#45;grey-50">
-            <h3>{{repo.name}}</h3>
-        </div>
-        <div class="mdl-color-text&#45;&#45;grey-600 mdl-card__supporting-text">
-            {{repo.description}}
-        </div>
-        <div class="mdl-card__supporting-text meta mdl-color-text&#45;&#45;grey-600">
-            <div>
-                <strong>Last Updated</strong>
-                <span>{{repo.updated_at | date:'medium'}}</span>
+<div class="mdl-cell--9-col">
+    <div  ng-repeat="repo in repoList">
+        <div class="mdl-card repoCard mdl-shadow--2dp mdl-cell mdl-cell&#45;&#45;12-col">
+            <div class="mdl-card__media mdl-color-text&#45;&#45;grey-50">
+                <h3>{{repo.name}}</h3>
+            </div>
+            <div class="mdl-color-text&#45;&#45;grey-600 mdl-card__supporting-text">
+                {{repo.description}}
+            </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text&#45;&#45;grey-600">
                 <div>
-                    <a href="#repoInfo">Details</a>
-                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button&#45;&#45;icon"
-                    ng-click="viewRepo(repo)" href="#repoInfo">
-                        <i class="material-icons">arrow_forward</i>
-                    </a>
+                    <strong>Last Updated</strong>
+                    <span>{{repo.updated_at | date:'medium'}}</span>
+                    <div>
+                        <a href="#repoInfo">Details</a>
+                        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button&#45;&#45;icon"
+                        ng-click="viewRepo(repo)" href="#repoInfo">
+                            <i class="material-icons">arrow_forward</i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

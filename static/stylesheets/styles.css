@@ -651,5 +651,23 @@ Added by Subbu
     background-image: url('../images/cardbground-1.jpg');
 }
 
+.layout-transparent {
+    background: url('../images/bground.jpg') center / cover;
+}
+.layout-transparent .mdl-layout__header,
+.layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+       your background is light. */
+    color: white;
+}
+
+.skill{
+    text-align: center;
+    background-color: aquamarine;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
+
 
 
