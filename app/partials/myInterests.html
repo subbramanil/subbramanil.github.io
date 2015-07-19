@@ -1,23 +1,21 @@
-<div class="demo-blog__posts mdl-grid ">
-    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-        <div class="mdl-card__media mdl-color-text--grey-50">
-            <h3>Interests</h3>
+<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__media mdl-color-text--grey-50">
+        <h3>Interests</h3>
+    </div>
+    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+        <div>
+            <strong>Reading Book</strong>
+            Last updated on <span>{{selectedRepo.updated_at | date:'medium'}}</span>
         </div>
-        <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-            <div>
-                <strong>Reading Book</strong>
-                Last updated on <span>{{selectedRepo.updated_at | date:'medium'}}</span>
-            </div>
-            <div class="section-spacer"></div>
-            <!--<div class="meta__favorites">425 <i class="material-icons">favorite</i></div>
-            <div><i class="material-icons">bookmark</i></div>
-            <div><i class="material-icons">share</i></div>-->
-        </div>
-        <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-            info
-            <!--<a href="{{selectedRepo.html_url}}"
-               class="mdl-button mdl-js-button mdl-button&#45;&#45;raised mdl-js-ripple-effect mdl-color&#45;&#45;accent mdl-color-text&#45;&#45;accent-contrast">View
-                Source</a>-->
-        </div>
+        <div class="section-spacer"></div>
+        <!--<div class="meta__favorites">425 <i class="material-icons">favorite</i></div>
+        <div><i class="material-icons">bookmark</i></div>
+        <div><i class="material-icons">share</i></div>-->
+    </div>
+    <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+        info
+        <!--<a href="{{selectedRepo.html_url}}"
+           class="mdl-button mdl-js-button mdl-button&#45;&#45;raised mdl-js-ripple-effect mdl-color&#45;&#45;accent mdl-color-text&#45;&#45;accent-contrast">View
+            Source</a>-->
     </div>
 </div>
