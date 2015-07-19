@@ -26,11 +26,12 @@
                     templateUrl: "./app/partials/projects"
                 })
                 .when("/interests", {
-                    templateUrl: "./app/partials/interests"
+                    templateUrl: "./app/partials/interests",
+                    controller: "UserController"
                 })
                 .when("/repoInfo", {
-                    templateUrl: "./app/partials/repoInfo",
-                    controller: "RepoController"
+                    templateUrl: "./app/partials/repoInfo"
+                    /*controller: "RepoController"*/
                 })
                 .otherwise("/");
         }
