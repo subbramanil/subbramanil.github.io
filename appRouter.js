@@ -6,7 +6,7 @@ module.exports = function (app) {
 
     app.get("/", function (req, res) {
         console.log("server is running successfully");
-        res.render("cover.html");
+        res.render("index.html");
     });
 
     app.get("/app/partials/home", function (req, res) {
