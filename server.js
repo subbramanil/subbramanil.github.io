@@ -8,7 +8,6 @@ var http = require('http').Server(app);
 var request = require('request');
 
 app.set('views',[__dirname,__dirname + '/app/partials']);
-//app.set('views',__dirname);
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 var oneDay = 86400000;
