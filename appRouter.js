@@ -19,6 +19,11 @@ module.exports = function (app) {
         res.render("repos.html");
     });
 
+    app.get("/repositories", function (req, res) {
+        console.log("loading repos page");
+        res.render("repos.html");
+    });
+
     app.get("/app/partials/contactMe", function (req, res) {
         console.log("loading Contact me page");
         res.render("contactMe.html");
