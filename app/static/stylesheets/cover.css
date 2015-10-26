@@ -172,3 +172,8 @@ input, button, select, textarea {
 .inner .cover section{
     background-color: #333;
 }
+
+.contactMe ul li{
+  display: inline;
+  margin-left: 20px;
+}

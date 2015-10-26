@@ -15,10 +15,11 @@
     <title>Awesome Projects</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="static/stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="app/static/stylesheets/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- Custom styles for this template -->
-    <link href="static/stylesheets/cover.css" rel="stylesheet">
+    <link href="app/static/stylesheets/cover.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -37,11 +38,11 @@
 
             <div class="masthead clearfix">
                 <div class="inner">
-                    <h3 class="masthead-brand">Subbramanil</h3>
+                    <a href="#home"><h3 class="masthead-brand">Subbramanil</h3></a>
                     <nav>
                         <ul class="nav masthead-nav">
                             <li class="active"><a href="#home">Home</a></li>
-                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#repos">Repositories</a></li>
                             <li><a href="#contactMe">Contact</a></li>
                         </ul>
                     </nav>
@@ -66,29 +67,25 @@
 </div>
 
 <!-- Placed at the end of the document so the pages load faster -->
-<script type="application/javascript" src="lib/angular.js"></script>
-<script type="application/javascript" src="lib/angular-route.js"></script>
-<script type="application/javascript" src="lib/angular-animate.js"></script>
+<script type="application/javascript" src="app/lib/angular.js"></script>
+<script type="application/javascript" src="app/lib/angular-route.js"></script>
+<script type="application/javascript" src="app/lib/angular-animate.js"></script>
 
-<script src="./lib/jquery.min.js"></script>
-<script src="./lib/bootstrap.min.js"></script>
+<script src="app/lib/jquery.min.js"></script>
+<script src="app/lib/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="./lib/ie10-viewport-bug-workaround.js"></script>
+<script src="app/lib/ie10-viewport-bug-workaround.js"></script>
 
 <script type="application/javascript" src="app/app.js"></script>
 <script type="application/javascript" src="app/services/appServices.js"></script>
-<script type="application/javascript" src="app/services/Utils.js"></script>
 <script type="application/javascript" src="app/services/GitHubService.js"></script>
-<script type="application/javascript" src="app/services/GoodReadsService.js"></script>
 
 <script type="application/javascript" src="app/directives/appDirectives.js"></script>
 <script type="application/javascript" src="app/directives/UserInfo.js"></script>
 <script type="application/javascript" src="app/directives/RepoList.js"></script>
 
 <script type="application/javascript" src="app/controllers/appControllers.js"></script>
-<script type="application/javascript" src="app/controllers/ProjectController.js"></script>
 <script type="application/javascript" src="app/controllers/RepoController.js"></script>
-<script type="application/javascript" src="app/controllers/UserController.js"></script>
 
 </body>
 </html>

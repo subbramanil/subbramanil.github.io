@@ -21,18 +21,18 @@
                         console.log($scope.repoList);
                     });
 
-                    $scope.viewRepo = function (repo) {
-                        console.log("Get this repo "+repo.name);
+                    /*$scope.viewRepo = function (repo) {
+                        console.log("Get this repo " + repo.name);
                         GitHubService.selectedRepo = repo;
                         GitHubService.getEvents(repo.name);
 
                         $scope.$watch(function () {
                             return GitHubService.eventList;
                         }, function () {
-                            $scope.eventList= GitHubService.eventList;
+                            $scope.eventList = GitHubService.eventList;
                             console.log($scope.eventList);
                         });
-                    };
+                    };*/
                 }
             }
         }]);

@@ -14,9 +14,9 @@ module.exports = function (app) {
         res.render("home.html");
     });
 
-    app.get("/app/partials/projects", function (req, res) {
-        console.log("loading projects page");
-        res.render("projects.html");
+    app.get("/app/partials/repos", function (req, res) {
+        console.log("loading repos page");
+        res.render("repos.html");
     });
 
     app.get("/app/partials/contactMe", function (req, res) {

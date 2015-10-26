@@ -1,0 +1,23 @@
+<div ng-repeat="repo in repoList">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <button class="btn btn-default">View on Github</button>
+            {{repo.name}}
+            Created at: {{repo.created_at}}
+            Last Updated at: {{repo.updated_at}}
+        </div>
+        <div class="panel-body">
+            <div class="col-lg-6">
+                {{repo.description}}
+            </div>
+            <div class="col-lg-6">
+                {{repo.language}}
+            </div>
+        </div>
+        <div class="panel-footer">
+
+            <button class="btn btn-default">Clone</button>
+            <button class="btn btn-default">Fork</button>
+        </div>
+    </div>
+</div>

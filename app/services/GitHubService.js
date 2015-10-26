@@ -5,53 +5,82 @@
 (function (angular) {
     var module = angular.module("appServices");
 
-    module.service("GitHubService", ["$http", "Utils", function ($http, Utils) {
+    module.service("GitHubService", [
+        "$http",
+        "$q",
+        function ($http, $q) {
 
-        var service = {};
+            var service = {};
 
-        service.selectedRepo = {};
+            service.repoList = {};
 
-        service.getUserInfo = function () {
-            console.log("Make call to node server");
-            $http.get("/profile").
-                success(function (result, status, headers, config) {
-                    Utils.logMsg("Got User data from server", result);
-                    service.User = result;
-                }).
-                error(function (data, status, headers, config) {
-                    Utils.logError("Error in fetching User info", status);
-                });
-        };
+            service.selectedRepo = {};
 
-        service.getRepositories = function () {
-            console.log("Make call to node server");
-            $http.get("/repositories").
-                success(function (result, status, headers, config) {
-                    service.repoList = result;
-                    angular.forEach(service.repo, function (item, index) {
-                        Utils.logMsg("Repo Name: ", item.name);
-                        service.getEvents(item.name);
+            function getRepositories() {
+                console.log("Get a list of repositories: ");
+                var defer = $q.defer();
+                $http(
+                    {
+                        method: "get",
+                        url: "/repositories"
+                    }
+                ).then(function (response) {
+                        console.log("Response: ", response.data);
+                        service.repoList = response.data;
+                        defer.resolve(response.data);
+                    },
+                    function (error) {
+                        console.log("Error: ", error.data);
+                        defer.resolve(error);
                     });
-                }).
-                error(function (data, status, headers, config) {
-                    Utils.logError("Error in fetching repo info", status);
-                });
-        };
+                return defer.promise;
+            }
 
-        service.getEvents = function (repoName) {
-            console.log("Make call to node server");
-            $http.get("/events/"+repoName).
-                success(function (result, status, headers, config) {
-                    service.eventList = result;
-                    Utils.logMsg("Most recent commit: ", service.eventList[0]);
-                }).
-                error(function (data, status, headers, config) {
-                    Utils.logError("Error in fetching repo info", status);
-                });
-        };
+            /*service.getUserInfo = function () {
+                console.log("Make call to node server");
+                $http.get("/profile").
+                    success(function (result, status, headers, config) {
+                        console.log("Got User data from server", result);
+                        service.User = result;
+                    }).
+                    error(function (data, status, headers, config) {
+                        console.log("Error in fetching User info", status);
+                    });
+            };
 
-        service.getUserInfo();
-        service.getRepositories();
-        return service;
-    }]);
+            service.getRepositories = function () {
+                console.log("Make call to node server");
+                $http.get("/repositories").
+                    success(function (result, status, headers, config) {
+                        service.repoList = result;
+                        angular.forEach(service.repo, function (item, index) {
+                            console.log("Repo Name: ", item.name);
+                            service.getEvents(item.name);
+                        });
+                    }).
+                    error(function (data, status, headers, config) {
+                        console.log("Error in fetching repo info", status);
+                    });
+            };
+
+            service.getEvents = function (repoName) {
+                console.log("Make call to node server");
+                $http.get("/events/" + repoName).
+                    success(function (result, status, headers, config) {
+                        service.eventList = result;
+                        console.log("Most recent commit: ", service.eventList[0]);
+                    }).
+                    error(function (data, status, headers, config) {
+                        console.log("Error in fetching repo info", status);
+                    });
+            };*/
+
+            service = {
+                getRepos: getRepositories
+            };
+
+            console.log(service);
+
+            return service;
+        }]);
 })(angular);

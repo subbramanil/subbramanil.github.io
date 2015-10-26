@@ -7,10 +7,14 @@
     module.controller("RepoController", [
             "$scope",
             "GitHubService",
-            "Utils",
-            function ($scope, GitHubService, Utils) {
-                $scope.selectedRepo = GitHubService.selectedRepo;
-                Utils.logMsg("User selected Repo", $scope.selectedRepo);
+            function ($scope, GitHubService) {
+                GitHubService.getRepos().
+                    then(function (data) {
+                        console.log("Service returns the list of repositories", data);
+                    },
+                    function (error) {
+                        console.log("Service failec to return the list of repositories with the error ", error);
+                    });
             }
         ]
     );
