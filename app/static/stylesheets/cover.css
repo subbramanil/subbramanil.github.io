@@ -177,3 +177,7 @@ input, button, select, textarea {
   display: inline;
   margin-left: 20px;
 }
+
+.fixColor{
+  color: #777;
+}
