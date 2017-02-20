@@ -50,12 +50,12 @@ module.exports = function (app, reqApi) {
                 }
             },
             function (error, response, body) {
-                console.log(body);
-                console.log(response.statusCode);
+                console.log("Response: Body ", body);
+                console.log("Response: Code ", response.statusCode);
                 if (!error && response.statusCode == 200) {
                     res.send(body);
                 } else {
-                    console.log(error);
+                    console.log("Error: ", error);
                 }
             }
         );
