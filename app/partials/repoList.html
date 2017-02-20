@@ -1,7 +1,7 @@
 <div ng-repeat="repo in repoList">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <button class="btn btn-default">View on Github</button>
+            <a class="btn btn-default" href="{{repo.html_url}}">View on Github</a>
             {{repo.name}}
             Created at: {{repo.created_at}}
             Last Updated at: {{repo.updated_at}}
