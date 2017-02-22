@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: /home/subbu/services/
     destination: /home/subbu/services/apps
 hooks:
   BeforeInstall:
