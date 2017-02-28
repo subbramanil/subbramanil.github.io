@@ -1,2 +1,7 @@
 name: Subbramanian Lakshmanan
 markdown: kramdown
+
+collections:
+  repos:
+    output: true
+    permalink: /repos/:path/
