@@ -1,5 +1,5 @@
 ---
-layout: repos
+layout: default
 title: Android Projects
 date: 2014-04-30
 ---
