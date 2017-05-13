@@ -16,23 +16,17 @@ function initWordCloud(){
 
     $('#myTechSkillSet').jQCloud(words, {
         shape: 'elliptic',
-        width: 500,
-        height: 350,
         autoResize: true,
         center: {x: 0.5, y:0.5},
         delay: 5,
-        colors: ["#395756", "#4F5D75", "#7261A3", "#A67DB8"],
-
+        colors: ["#395756", "#4F5D75", "#7261A3", "#A67DB8"]
     });
 
     $('#mySoftSkillSet').jQCloud(words, {
         shape: 'rectangle',
-        width: 500,
-        height: 350,
         autoResize: true,
         center: {x: 0.5, y:0.5},
         delay: 5,
-        colors: ["#395756", "#4F5D75", "#7261A3", "#A67DB8"],
-
+        colors: ["#BB4430", "#7EBDC2", "#F3DFA2", "#EFE6DD"]
     });
 }
