@@ -8,7 +8,8 @@ function initWordCloud(){
         {text: "Android", weight: 13},
         {text: "Java", weight: 10.5},
         {text: "Javascript", weight: 9.4},
-        {text: "AngularJS", weight: 8}
+        {text: "AngularJS", weight: 8},
+        {text: "node.js", weight: 7}
     ];
 
     var softSkills = [
