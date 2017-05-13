@@ -31,7 +31,7 @@ function initWordCloud(){
         autoResize: true,
         center: {x: 0.5, y:0.5},
         delay: 5,
-        colors: ["#395756", "#4F5D75", "#7261A3", "#A67DB8"]
+        colors: ["#395756", "#4F5D75", "#7261A3", "#A67DB8", "#e31a1c", "#fc4e2a", "#fd8d3c", "#feb24c", "#fed976", "#ffeda0", "#ffffcc"]
     });
 
     $('#mySoftSkillSet').jQCloud(softSkills, {
@@ -41,6 +41,6 @@ function initWordCloud(){
         autoResize: true,
         center: {x: 0.5, y:0.5},
         delay: 5,
-        colors: ["#BB4430", "#7EBDC2", "#F3DFA2", "#EFE6DD"]
+        colors: ["#BB4430", "#7EBDC2","#e31a1c", "#fc4e2a", "#fd8d3c", "#feb24c", "#fed976", "#ffeda0", "#ffffcc"]
     });
 }
