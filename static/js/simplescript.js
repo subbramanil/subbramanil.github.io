@@ -20,4 +20,5 @@ function initWordCloud(){
         width: 500,
         height: 350
     });
+    console.log("initWordCloud");
 }
