@@ -1,8 +1,10 @@
 window.onload = function() {
-  initWordCloud();
+    console.log("onLoad");
+    initWordCloud();
 };
 
 function initWordCloud(){
+    console.log("initWordCloud");
     var words = [
         {text: "Lorem", weight: 13},
         {text: "Ipsum", weight: 10.5},
