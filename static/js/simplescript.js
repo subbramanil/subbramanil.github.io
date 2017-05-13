@@ -25,6 +25,8 @@ function initWordCloud(){
     ];
 
     $('#myTechSkillSet').jQCloud(techSkills, {
+        width: 500, 
+        height: 300,
         shape: 'elliptic',
         autoResize: true,
         center: {x: 0.5, y:0.5},
@@ -33,6 +35,8 @@ function initWordCloud(){
     });
 
     $('#mySoftSkillSet').jQCloud(softSkills, {
+        width: 500, 
+        height: 300,
         shape: 'rectangle',
         autoResize: true,
         center: {x: 0.5, y:0.5},
