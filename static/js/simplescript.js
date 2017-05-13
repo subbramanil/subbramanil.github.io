@@ -15,5 +15,9 @@ function initWordCloud(){
         {text: "Adipiscing", weight: 5},
     ];
 
-    $('#mySkillSet').jQCloud(words);
+    $('#mySkillSet').jQCloud(words, {
+        shape: 'rectangular',
+        width: 500,
+        height: 350
+    });
 }
