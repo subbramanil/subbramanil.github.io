@@ -1,7 +1,7 @@
 window.onload = function() {
     console.log("onLoad");
     initWordCloud();
-};
+}
 
 function initWordCloud(){
     console.log("initWordCloud");
