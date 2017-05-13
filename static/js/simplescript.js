@@ -8,8 +8,7 @@ function initWordCloud(){
         {text: "Android", weight: 13},
         {text: "Java", weight: 10.5},
         {text: "Javascript", weight: 9.4},
-        {text: "AngularJS", weight: 8},
-        {text: "IoT", weight: 6.2},
+        {text: "AngularJS", weight: 8}
     ];
 
     var softSkills = [
@@ -17,6 +16,7 @@ function initWordCloud(){
         {text: "Quick Learner", weight: 10.5},
         {text: "Self-Motivated", weight: 9.4},
         {text: "Volunteer", weight: 8},
+        {text: "Mentorship", weight: 7},
         {text: "Cowboy->Vogans", weight: 6.2, link: 'https://dev.to/anotherdevblog/there-are-two-types-of-engineers-be-both'},
     ];
 
@@ -25,7 +25,7 @@ function initWordCloud(){
         height: 300,
         shape: 'elliptic',
         autoResize: true,
-        center: {x: 0.5, y:0.5},
+        center: {x: 0.5, y:0.2},
         delay: 5,
         colors: ["#395756", "#4F5D75", "#7261A3", "#A67DB8", "#e31a1c", "#fc4e2a", "#fd8d3c", "#feb24c", "#fed976", "#ffeda0", "#ffffcc"]
     });
@@ -35,7 +35,7 @@ function initWordCloud(){
         height: 300,
         shape: 'rectangle',
         autoResize: true,
-        center: {x: 0.5, y:0.5},
+        center: {x: 0.5, y:0.2},
         delay: 5,
         colors: ["#BB4430", "#7EBDC2","#e31a1c", "#fc4e2a", "#fd8d3c", "#feb24c", "#fed976", "#ffeda0", "#ffffcc"]
     });
