@@ -1,21 +1,26 @@
 <div ng-repeat="repo in repoList">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <a class="btn btn-default" href="{{repo.html_url}}">View on Github</a>
-            {{repo.name}}
-            Created at: {{repo.created_at}}
-            Last Updated at: {{repo.updated_at}}
+            <h3> {{repo.name}} </h3>
+          <div class="row">
+            <div class="col-lg-4">
+              <a class="btn btn-default" href="{{repo.html_url}}">View on Github</a>
+            </div>
+            <div class="col-lg-8 pull-right">
+              Created at: {{repo.created_at | date:"MM/dd/yyyy 'at' h:mma"}}<br/>
+              Last Updated at: {{repo.updated_at | date:"MM/dd/yyyy 'at' h:mma"}}
+            </div>
+          </div>
         </div>
         <div class="panel-body">
-            <div class="col-lg-6">
+            <div class="col-lg-6 contentDesc">
                 {{repo.description}}
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 contentTags">
                 {{repo.language}}
             </div>
         </div>
         <div class="panel-footer">
-
             <button class="btn btn-default">Clone</button>
             <button class="btn btn-default">Fork</button>
         </div>

@@ -19,6 +19,6 @@ require('./appRouter')(app, request);
 
 require('./rest')(app, request);
 
-var server = http.listen(process.env.PORT || 5004, function(){
-    console.log("Server is ready at port "+server.address().port);
+var server = http.listen(process.env.PORT || 5003, function(){
+    console.log("Server is ready at port "+ server.address().port);
 });
