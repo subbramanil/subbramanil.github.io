@@ -22,7 +22,7 @@ function initWordCloud(){
         autoResize: true,
         center: {x: 0.5, y:0.5},
         delay: 5,
-        colors: ["#800026", "#bd0026", "#e31a1c", "#fc4e2a", "#fd8d3c", "#feb24c", "#fed976", "#ffeda0", "#ffffcc"],
+        colors: ["#395756", "#4F5D75", "#7261A3", "#A67DB8"],
 
     });
     console.log("initWordCloud");
