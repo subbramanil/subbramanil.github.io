@@ -1,5 +1,4 @@
 window.onload = function() {
-    console.log("onLoad");
     initWordCloud();
 }
 
@@ -15,7 +14,7 @@ function initWordCloud(){
         {text: "Adipiscing", weight: 5},
     ];
 
-    $('#mySkillSet').jQCloud(words, {
+    $('#myTechSkillSet').jQCloud(words, {
         shape: 'elliptic',
         width: 500,
         height: 350,
@@ -25,5 +24,15 @@ function initWordCloud(){
         colors: ["#395756", "#4F5D75", "#7261A3", "#A67DB8"],
 
     });
-    console.log("initWordCloud");
+
+    $('#mySoftSkillSet').jQCloud(words, {
+        shape: 'rectangle',
+        width: 500,
+        height: 350,
+        autoResize: true,
+        center: {x: 0.5, y:0.5},
+        delay: 5,
+        colors: ["#395756", "#4F5D75", "#7261A3", "#A67DB8"],
+
+    });
 }
