@@ -10,8 +10,6 @@ function initWordCloud(){
         {text: "Javascript", weight: 9.4},
         {text: "AngularJS", weight: 8},
         {text: "IoT", weight: 6.2},
-        {text: "Consectetur", weight: 5},
-        {text: "Adipiscing", weight: 5},
     ];
 
     var softSkills = [
@@ -20,8 +18,6 @@ function initWordCloud(){
         {text: "Self-Motivated", weight: 9.4},
         {text: "Volunteer", weight: 8},
         {text: "Cowboy->Vogans", weight: 6.2, link: 'https://dev.to/anotherdevblog/there-are-two-types-of-engineers-be-both'},
-        {text: "Consectetur", weight: 5},
-        {text: "Adipiscing", weight: 5},
     ];
 
     $('#myTechSkillSet').jQCloud(techSkills, {
