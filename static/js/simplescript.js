@@ -17,7 +17,7 @@ function initWordCloud(){
         {text: "Quick Learner", weight: 10.5},
         {text: "Self-Motivated", weight: 9.4},
         {text: "Volunteer", weight: 8},
-        {text: "Mentorship", weight: 7},
+        {text: "Mentor", weight: 7},
         {text: "Cowboy->Vogans", weight: 6.2, link: 'https://dev.to/anotherdevblog/there-are-two-types-of-engineers-be-both'},
     ];
 
