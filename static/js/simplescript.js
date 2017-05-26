@@ -12,6 +12,14 @@ function initWordCloud(){
         {text: "node.js", weight: 7}
     ];
 
+    var skillSet = [
+        ["Android", 13],
+        ["Java", 12],
+        ["Javasript", 9],
+        ["AngularJS", 8],
+        ["node.js", 9]
+    ];
+
     var softSkills = [
         {text: "Team Player", weight: 13},
         {text: "Quick Learner", weight: 10.5},
@@ -31,7 +39,7 @@ function initWordCloud(){
         colors: ["#395756", "#4F5D75", "#7261A3", "#A67DB8", "#e31a1c", "#fc4e2a", "#fd8d3c", "#feb24c", "#fed976", "#ffeda0", "#ffffcc"]
     });
 
-    $('#mySoftSkillSet').jQCloud(softSkills, {
+   /* $('#mySoftSkillSet').jQCloud(softSkills, {
         width: 500, 
         height: 300,
         shape: 'rectangle',
@@ -39,9 +47,11 @@ function initWordCloud(){
         center: {x: 0.5, y:0.2},
         delay: 5,
         colors: ["#BB4430", "#7EBDC2","#e31a1c", "#fc4e2a", "#fd8d3c", "#feb24c", "#fed976", "#ffeda0", "#ffffcc"]
-    });
+    });*/
 
     $('#myTabs a').click(function (e) {
         $(this).tab('show');
     });
+
+    WordCloud(document.getElementById('mySoftSkillSet'), { list: skillSet } );
 }
