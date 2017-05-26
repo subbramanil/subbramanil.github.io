@@ -42,7 +42,6 @@ function initWordCloud(){
     });
 
     $('#myTabs a').click(function (e) {
-        e.preventDefault()
-        $(this).tab('show')
+        $(this).tab('show');
     });
 }
