@@ -40,4 +40,9 @@ function initWordCloud(){
         delay: 5,
         colors: ["#BB4430", "#7EBDC2","#e31a1c", "#fc4e2a", "#fd8d3c", "#feb24c", "#fed976", "#ffeda0", "#ffffcc"]
     });
+
+    $('#myTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    });
 }
