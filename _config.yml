@@ -1,2 +1,3 @@
 name: Subbramanian Lakshmanan
 markdown: kramdown
+include: ["source/.well-known"]

@@ -1,9 +1,14 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.chaturaloka.discoveryou",
-    "sha256_cert_fingerprints":
-    ["C9:38:51:1F:19:FC:CA:81:7E:DB:68:01:67:1A:7B:EC:F5:69:F0:01:A8:76:DA:47:FB:30:D1:7E:E4:69:1E:71"]
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.chaturaloka.discoveryou",
+      "sha256_cert_fingerprints": [
+        "C9:38:51:1F:19:FC:CA:81:7E:DB:68:01:67:1A:7B:EC:F5:69:F0:01:A8:76:DA:47:FB:30:D1:7E:E4:69:1E:71"
+      ]
+    }
   }
-}]
+]
