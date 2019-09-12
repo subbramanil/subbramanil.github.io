@@ -6,14 +6,7 @@ title: Discover You, Android App
     <h1>Discover You</h1> <br />
     <h3>Android App to learn more about yourself by asking questions and finding answers</h3>
 
-    <button class="btn-default" id="btnViewAppInStore">View App In Store</button>
+    <a href="http://play.google.com/store/apps/details?id=com.google.android.apps.maps" class="btn-default">
+        View App In Store
+    </a>
 </div>
-
-<script>
-    var openAppInStore = function () {
-        console.log("Redirect to store...");
-        window.location.replace('market://details?id=com.chaturaloka.discoveryou');
-    };
-
-    document.getElementById('btnViewAppInStore').click(openAppInStore());
-</script>
