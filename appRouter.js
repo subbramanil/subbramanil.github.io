@@ -23,4 +23,9 @@ module.exports = function (app) {
         console.log("loading Contact me page");
         res.render("contactMe.html");
     });
+
+    app.get("/app/partials/applns", function (req, res) {
+        console.log("loading Apps page");
+        res.render("apps.html");
+    });
 };

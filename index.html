@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="GitHubApp">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
@@ -30,62 +31,66 @@
 
 <body>
 
-<div class="site-wrapper">
+    <div class="site-wrapper">
 
-    <div class="site-wrapper-inner">
+        <div class="site-wrapper-inner">
 
-        <div class="cover-container">
+            <div class="cover-container">
 
-            <div class="masthead clearfix">
-                <div class="inner">
-                    <a href="#home"><h3 class="masthead-brand">Subbu Lakshmanan</h3></a>
-                    <nav>
-                        <ul class="nav masthead-nav">
-                            <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-                            <li><a data-toggle="tab" href="#repos">Repositories</a></li>
-                            <li><a data-toggle="tab" href="#contactMe">Contact</a></li>
-                        </ul>
-                    </nav>
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <a href="#home">
+                            <h3 class="masthead-brand">Subbu Lakshmanan</h3>
+                        </a>
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                                <li><a data-toggle="tab" href="#repos">Repositories</a></li>
+                                <li><a data-toggle="tab" href="#contactMe">Contact</a></li>
+                                <li><a data-toggle="tab" href="#applns">Apps</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-            </div>
 
-            <div class="inner cover">
-                <ng-view></ng-view>
-            </div>
-
-            <div class="mastfoot">
-                <div class="inner">
-                    <p>Cover template for <a href="http://getbootstrap.com/">Bootstrap</a>, by <a
-                            href="https://twitter.com/mdo">@mdo</a>.</p>
+                <div class="inner cover">
+                    <ng-view></ng-view>
                 </div>
+
+                <div class="mastfoot">
+                    <div class="inner">
+                        <p>Cover template for <a href="http://getbootstrap.com/">Bootstrap</a>, by <a
+                                href="https://twitter.com/mdo">@mdo</a>.</p>
+                    </div>
+                </div>
+
             </div>
 
         </div>
 
     </div>
 
-</div>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="application/javascript" src="app/lib/angular.js"></script>
+    <script type="application/javascript" src="app/lib/angular-route.js"></script>
+    <script type="application/javascript" src="app/lib/angular-animate.js"></script>
 
-<!-- Placed at the end of the document so the pages load faster -->
-<script type="application/javascript" src="app/lib/angular.js"></script>
-<script type="application/javascript" src="app/lib/angular-route.js"></script>
-<script type="application/javascript" src="app/lib/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="app/lib/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="app/lib/ie10-viewport-bug-workaround.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="app/lib/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="app/lib/ie10-viewport-bug-workaround.js"></script>
+    <script type="application/javascript" src="app/app.js"></script>
+    <script type="application/javascript" src="app/services/appServices.js"></script>
+    <script type="application/javascript" src="app/services/GitHubService.js"></script>
 
-<script type="application/javascript" src="app/app.js"></script>
-<script type="application/javascript" src="app/services/appServices.js"></script>
-<script type="application/javascript" src="app/services/GitHubService.js"></script>
+    <script type="application/javascript" src="app/directives/appDirectives.js"></script>
+    <script type="application/javascript" src="app/directives/UserInfo.js"></script>
+    <script type="application/javascript" src="app/directives/RepoList.js"></script>
 
-<script type="application/javascript" src="app/directives/appDirectives.js"></script>
-<script type="application/javascript" src="app/directives/UserInfo.js"></script>
-<script type="application/javascript" src="app/directives/RepoList.js"></script>
-
-<script type="application/javascript" src="app/controllers/appControllers.js"></script>
-<script type="application/javascript" src="app/controllers/RepoController.js"></script>
+    <script type="application/javascript" src="app/controllers/appControllers.js"></script>
+    <script type="application/javascript" src="app/controllers/RepoController.js"></script>
 
 </body>
+
 </html>

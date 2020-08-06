@@ -14,7 +14,7 @@
 
     gitHubApp.config([
         "$routeProvider",
-        function($routeProvider) {
+        function ($routeProvider) {
             $routeProvider
                 .when("/", {
                     templateUrl: "./app/partials/home"
@@ -25,9 +25,12 @@
                 .when("/contactMe", {
                     templateUrl: "./app/partials/contactMe"
                 })
+                .when("/applns", {
+                    templateUrl: "./app/partials/apps"
+                })
                 .when("/repos", {
                     templateUrl: "./app/partials/repos",
-                    controller:"RepoController"
+                    controller: "RepoController"
                 })
                 .otherwise("/");
         }
