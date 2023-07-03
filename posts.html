@@ -1,0 +1,26 @@
+---
+layout: default
+title: Posts
+---
+<section>
+    <header class="panel-heading">
+        <h2> Posts </h2>
+    </header>
+    <div class="panel-body">
+        <div class="jumbotron">
+            <h1> Page Under construction </h1>
+            <blockquote>
+                <p class="fixColor">“It's through mistakes that you actually can grow. You have to get bad in order to
+                    get good.”</p>
+                <footer><cite title="Source Title">Paula Scher</cite></footer>
+            </blockquote>
+        </div>
+        <ul>
+            {% for post in site.posts %}
+            <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
